@@ -97,7 +97,13 @@ def _svg_double_box(a, b, y, scale=1.0):
 	  height="%f"\
 	  x="%f"\
 	  y="%f"\
-	  style="fill:#ffffff;stroke:#000000;stroke-width:%f;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
+	  style="fill:#ffffff;stroke:none;stroke-width:%f;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
+      <line\
+	  x1="%f"\
+	  y1="%f"\
+	  x2="%f"\
+	  y2="%f"\
+	  style="fill:none;stroke:#000000;stroke-width:%f;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
       <line\
 	  x1="%f"\
 	  y1="%f"\
@@ -118,8 +124,10 @@ def _svg_double_box(a, b, y, scale=1.0):
       </text>\
     </g>' % (99 * scale, 99 * scale, scale, y * scale, 2 * scale,
              4 * scale, scale, (y + 99) * scale, 99 * scale,
-             (y + 1) * scale, 2 * scale, 4 * scale, 40 * scale, 12 * scale,
-             (y + 51) * scale, a, 40 * scale, 52 * scale, (y + 81) * scale, b)
+             (y + 1) * scale, 2 * scale, 4 * scale, scale, (y + 1) * scale,
+             99 * scale, (y + 1) * scale, 2 * scale, 4 * scale, 40 * scale,
+             12 * scale, (y + 51) * scale, a, 40 * scale, 54 * scale,
+             (y + 85) * scale, b)
 
 
 def _bone_factory(value, scale=1.0):
@@ -210,12 +218,13 @@ class NapierActivity(activity.Activity):
         self._blank_image = None
         self._number = 0
         self._number_of_bones = 0
-        self._circles = [None, None]
-        self._ovals = []
 
         self._setup_toolbars(_have_toolbox)
         self._setup_canvas()
+        self._circles = [None, None]
+        self._ovals = []
         self._setup_workspace()
+        self._restore()
 
     def _setup_canvas(self):
         ''' Create a canvas '''
@@ -379,13 +388,13 @@ class NapierActivity(activity.Activity):
             self._status.set_label('')
             self._circles[0].move((0, -100))
             self._circles[1].move((0, -100))
-            for number in range(self._max_bones):
+            for number in range(self._max_bones - 1):
                 self._ovals[number].move((0, -100))
         else:
             c0dx = int(4 * self._scale)
             c0dy = int(12 * self._scale)
             c1dx = int(44 * self._scale)
-            c1dy = int(42 * self._scale)
+            c1dy = int(47 * self._scale)
             odx = int(42 * self._scale)
             ody = int(2 * self._scale)
             self._circles[0].move((self._bone_width + c0dx,
@@ -405,8 +414,22 @@ class NapierActivity(activity.Activity):
         return True
 
     def _expose_cb(self, win, event):
+        ''' Have to refresh after a change in window status. '''
         self._sprites.redraw_sprites()
         return True
 
     def _destroy_cb(self, win, event):
         gtk.main_quit()
+
+    def _restore(self):
+        ''' Try to restore previous state. '''
+        if 'number' in self.metadata and self.metadata['number'] != '0':
+            for digit in range(len(self.metadata['number'])):
+                self._number_cb(button=None,
+                                value=int(self.metadata['number'][digit]))
+
+    def write_file(self, file_path):
+        ''' Write the status to the Journal. '''
+        if not hasattr(self, '_number'):
+            return
+        self.metadata['number'] = str(self._number)
