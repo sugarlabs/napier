@@ -78,7 +78,7 @@ def _svg_single_box(a, scale=1.0):
 	  height="%f"\
 	  x="%f"\
 	  y="%f"\
-	  style="fill:none;stroke:#000000;stroke-width:%f;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
+	  style="fill:#ffffff;stroke:#000000;stroke-width:%f;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
       <text\
       style="font-size:%fpx;font-style:normal;font-weight:bold;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;text-align:center;text-anchor:middle">\
 	<tspan x="%f" y="%f">\
@@ -97,7 +97,7 @@ def _svg_double_box(a, b, y, scale=1.0):
 	  height="%f"\
 	  x="%f"\
 	  y="%f"\
-	  style="fill:none;stroke:#000000;stroke-width:%f;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
+	  style="fill:#ffffff;stroke:#000000;stroke-width:%f;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:%f;stroke-opacity:1;stroke-dasharray:none" />\
       <line\
 	  x1="%f"\
 	  y1="%f"\
