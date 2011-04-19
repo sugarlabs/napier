@@ -1,0 +1,8 @@
+[Activity]
+name = Napier
+activity_version = 1
+license = GPLv3
+bundle_id = org.sugarlabs.NapierActivity
+exec = sugar-activity NapierActivity.NapierActivity
+icon = activity-napier
+show_launcher = yes

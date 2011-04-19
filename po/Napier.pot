@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-19 09:01-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: activity/activity.info:2
+msgid "Napier"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:283
+msgid "Select a bone"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:299
+msgid "Bones"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:300
+msgid "Results"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:307
+msgid "Clear"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:311
+msgid "zero"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:314
+msgid "one"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:317
+msgid "two"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:320
+msgid "three"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:323
+msgid "four"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:326
+msgid "five"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:329
+msgid "six"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:332
+msgid "seven"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:335
+msgid "eight"
+msgstr ""
+
+#: /home/walter/Desktop/Activities/napier/NapierActivity.py:338
+msgid "nine"
+msgstr ""
