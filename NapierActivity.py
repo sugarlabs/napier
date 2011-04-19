@@ -304,7 +304,7 @@ class NapierActivity(activity.Activity):
         _separator_factory(self.toolbar)
 
         self._new_calc_button = _button_factory(
-            'new-game', _('Clear'), self._new_calc_cb, self.toolbar)
+            'erase', _('Clear'), self._new_calc_cb, self.toolbar)
 
         self._status = _label_factory('', self.toolbar)
 
