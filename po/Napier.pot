@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-19 09:01-0400\n"
+"POT-Creation-Date: 2011-08-03 10:21-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,58 +21,58 @@ msgstr ""
 msgid "Napier"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:283
+#: NapierActivity.py:292
 msgid "Select a bone"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:299
+#: NapierActivity.py:308
 msgid "Bones"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:300
+#: NapierActivity.py:309
 msgid "Results"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:307
+#: NapierActivity.py:316
 msgid "Clear"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:311
+#: NapierActivity.py:320
 msgid "zero"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:314
+#: NapierActivity.py:323
 msgid "one"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:317
+#: NapierActivity.py:326
 msgid "two"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:320
+#: NapierActivity.py:329
 msgid "three"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:323
+#: NapierActivity.py:332
 msgid "four"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:326
+#: NapierActivity.py:335
 msgid "five"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:329
+#: NapierActivity.py:338
 msgid "six"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:332
+#: NapierActivity.py:341
 msgid "seven"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:335
+#: NapierActivity.py:344
 msgid "eight"
 msgstr ""
 
-#: /home/walter/Desktop/Activities/napier/NapierActivity.py:338
+#: NapierActivity.py:347
 msgid "nine"
 msgstr ""
