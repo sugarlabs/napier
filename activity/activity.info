@@ -1,6 +1,6 @@
 [Activity]
 name = Napier
-activity_version = 3
+activity_version = 4
 license = GPLv3
 bundle_id = org.sugarlabs.NapierActivity
 exec = sugar-activity NapierActivity.NapierActivity
