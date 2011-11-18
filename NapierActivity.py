@@ -30,9 +30,7 @@ if _have_toolbox:
     from sugar.activity.widgets import StopButton
     from sugar.graphics.toolbarbox import ToolbarButton
 
-from sugar.graphics.toolbutton import ToolButton
-from sugar.graphics.menuitem import MenuItem
-
+from toolbar_utils import button_factory, separator_factory, label_factory
 from sprites import Sprites, Sprite
 
 from gettext import gettext as _
@@ -154,47 +152,6 @@ def _load_svg_from_file(file_path, width, height):
     return gtk.gdk.pixbuf_new_from_file_at_size(file_path, width, height)
 
 
-def _button_factory(icon_name, tooltip, callback, toolbar, cb_arg=None,
-                    accelerator=None):
-    '''Factory for making toolbar buttons'''
-    my_button = ToolButton(icon_name)
-    my_button.set_tooltip(tooltip)
-    my_button.props.sensitive = True
-    if accelerator is not None:
-        my_button.props.accelerator = accelerator
-    if cb_arg is not None:
-        my_button.connect('clicked', callback, cb_arg)
-    else:
-        my_button.connect('clicked', callback)
-    if hasattr(toolbar, 'insert'):  # the main toolbar
-        toolbar.insert(my_button, -1)
-    else:  # or a secondary toolbar
-        toolbar.props.page.insert(my_button, -1)
-    my_button.show()
-    return my_button
-
-
-def _label_factory(label, toolbar):
-    ''' Factory for adding a label to a toolbar '''
-    my_label = gtk.Label(label)
-    my_label.set_line_wrap(True)
-    my_label.show()
-    toolitem = gtk.ToolItem()
-    toolitem.add(my_label)
-    toolbar.insert(toolitem, -1)
-    toolitem.show()
-    return my_label
-
-
-def _separator_factory(toolbar, visible=True, expand=False):
-    ''' Factory for adding a separator to a toolbar '''
-    separator = gtk.SeparatorToolItem()
-    separator.props.draw = visible
-    separator.set_expand(expand)
-    toolbar.insert(separator, -1)
-    separator.show()
-
-
 class NapierActivity(activity.Activity):
     ''' Napier's bones: Napier's bones were invented by John Napier
     (1550-1617), a Scottish mathematician and scientist. They help you
@@ -310,45 +267,45 @@ class NapierActivity(activity.Activity):
             toolbox.show()
             toolbox.set_current_toolbar(1)
 
-        _separator_factory(self.toolbar)
+        separator_factory(self.toolbar)
 
-        self._new_calc_button = _button_factory(
-            'erase', _('Clear'), self._new_calc_cb, self.toolbar)
+        self._new_calc_button = button_factory(
+            'erase', self.toolbar, self._new_calc_cb, tooltip=_('Clear'))
 
-        self._status = _label_factory('', self.toolbar)
+        self._status = label_factory(self.toolbar, '')
 
-        _button_factory('number-0', _('zero'), self._number_cb,
-                        self._bones_toolbar, cb_arg=0)
+        button_factory('number-0', self._bones_toolbar, self._number_cb,
+                        cb_arg=0, tooltip=_('zero'))
 
-        _button_factory('number-1', _('one'), self._number_cb,
-                        self._bones_toolbar, cb_arg=1)
+        button_factory('number-1', self._bones_toolbar, self._number_cb,
+                        cb_arg=1, tooltip=_('one'))
 
-        _button_factory('number-2', _('two'), self._number_cb,
-                        self._bones_toolbar, cb_arg=2)
+        button_factory('number-2', self._bones_toolbar, self._number_cb,
+                        cb_arg=2, tooltip=_('two'))
 
-        _button_factory('number-3', _('three'), self._number_cb,
-                        self._bones_toolbar, cb_arg=3)
+        button_factory('number-3', self._bones_toolbar, self._number_cb,
+                        cb_arg=3, tooltip=_('three'))
 
-        _button_factory('number-4', _('four'), self._number_cb,
-                        self._bones_toolbar, cb_arg=4)
+        button_factory('number-4', self._bones_toolbar, self._number_cb,
+                        cb_arg=4, tooltip=_('four'))
 
-        _button_factory('number-5', _('five'), self._number_cb,
-                        self._bones_toolbar, cb_arg=5)
+        button_factory('number-5', self._bones_toolbar, self._number_cb,
+                        cb_arg=5, tooltip=_('five'))
 
-        _button_factory('number-6', _('six'), self._number_cb,
-                        self._bones_toolbar, cb_arg=6)
+        button_factory('number-6', self._bones_toolbar, self._number_cb,
+                        cb_arg=6, tooltip=_('six'))
 
-        _button_factory('number-7', _('seven'), self._number_cb,
-                        self._bones_toolbar, cb_arg=7)
+        button_factory('number-7', self._bones_toolbar, self._number_cb,
+                        cb_arg=7, tooltip=_('seven'))
 
-        _button_factory('number-8', _('eight'), self._number_cb,
-                        self._bones_toolbar, cb_arg=8)
+        button_factory('number-8', self._bones_toolbar, self._number_cb,
+                        cb_arg=8, tooltip=_('eight'))
 
-        _button_factory('number-9', _('nine'), self._number_cb,
-                        self._bones_toolbar, cb_arg=9)
+        button_factory('number-9', self._bones_toolbar, self._number_cb,
+                        cb_arg=9, tooltip=_('nine'))
 
         if _have_toolbox:
-            _separator_factory(toolbox.toolbar, False, True)
+            separator_factory(toolbox.toolbar, True, False)
 
             stop_button = StopButton(self)
             stop_button.props.accelerator = '<Ctrl>q'
@@ -359,7 +316,7 @@ class NapierActivity(activity.Activity):
     def _new_calc_cb(self, button=None):
         ''' Start a new calculation. '''
         for bone in range(self._max_bones):
-            self._bones[bone].images[0] = self._blank_image
+            self._bones[bone].set_shape(self._blank_image)
             self._bones[bone].inval()
         self._number_of_bones = 0
         self._number = 0
@@ -374,7 +331,7 @@ class NapierActivity(activity.Activity):
         if self._bone_images[value] is None:
             self._bone_images[value] = _svg_str_to_pixbuf(
                 _bone_factory(value, scale=self._scale))
-        self._bones[self._number_of_bones].images[0] = self._bone_images[value]
+        self._bones[self._number_of_bones].set_shape(self._bone_images[value])
         self._bones[self._number_of_bones].inval()
         self._number = self._number * 10 + value
 
@@ -414,9 +371,19 @@ class NapierActivity(activity.Activity):
         return True
 
     def _expose_cb(self, win, event):
-        ''' Have to refresh after a change in window status. '''
-        self._sprites.redraw_sprites()
+        ''' Callback to handle window expose events '''
+        self.do_expose_event(event)
         return True
+
+    def do_expose_event(self, event):
+        ''' Handle the expose-event by drawing '''
+        # Restrict Cairo to the exposed area
+        cr = self._canvas.window.cairo_create()
+        cr.rectangle(event.area.x, event.area.y,
+                event.area.width, event.area.height)
+        cr.clip()
+        # Refresh sprite list
+        self._sprites.redraw_sprites(cr=cr)
 
     def _destroy_cb(self, win, event):
         gtk.main_quit()
