@@ -1,3 +1,8 @@
+5
+
+ENHANCEMENTS:
+* Ignacio Rodriguez port to gtk3
+
 4
 
 * Migrate to Cairo graphics

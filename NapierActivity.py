@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #Copyright (c) 2011 Walter Bender
+#Copyright (c) 2012 Ignacio Rodriguez
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -11,35 +12,24 @@
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 
-import gtk
-import gobject
 import os
-
-import sugar
-from sugar.activity import activity
-from sugar import profile
-try:
-    from sugar.graphics.toolbarbox import ToolbarBox
-    _have_toolbox = True
-except ImportError:
-    _have_toolbox = False
-
-if _have_toolbox:
-    from sugar.bundle.activitybundle import ActivityBundle
-    from sugar.activity.widgets import ActivityToolbarButton
-    from sugar.activity.widgets import StopButton
-    from sugar.graphics.toolbarbox import ToolbarButton
+from gi.repository import Gtk, Gdk, GObject, GdkPixbuf
+import sugar3
+from sugar3.activity import activity
+from sugar3 import profile
+from sugar3.graphics.toolbarbox import ToolbarBox
+from sugar3.bundle.activitybundle import ActivityBundle
+from sugar3.activity.widgets import ActivityToolbarButton
+from sugar3.activity.widgets import StopButton
+from sugar3.graphics.toolbarbox import ToolbarButton
 
 from toolbar_utils import button_factory, separator_factory, label_factory
 from sprites import Sprites, Sprite
 
 from gettext import gettext as _
 
-try:
-    from sugar.graphics import style
-    GRID_CELL_SIZE = style.GRID_CELL_SIZE
-except ImportError:
-    GRID_CELL_SIZE = 0
+from sugar3.graphics import style
+GRID_CELL_SIZE = style.GRID_CELL_SIZE
 
 SERVICE = 'org.sugarlabs.NapierActivity'
 IFACE = SERVICE
@@ -140,7 +130,7 @@ def _bone_factory(value, scale=1.0):
 
 def _svg_str_to_pixbuf(svg_string):
     ''' Load pixbuf from SVG string '''
-    pl = gtk.gdk.PixbufLoader('svg')
+    pl = GdkPixbuf.PixbufLoader.new_with_type('svg')
     pl.write(svg_string)
     pl.close()
     pixbuf = pl.get_pixbuf()
@@ -149,7 +139,7 @@ def _svg_str_to_pixbuf(svg_string):
 
 def _load_svg_from_file(file_path, width, height):
     '''Create a pixbuf from SVG in a file. '''
-    return gtk.gdk.pixbuf_new_from_file_at_size(file_path, width, height)
+    return GdkPixbuf.Pixbuf.new_from_file_at_size(file_path, width, height)
 
 
 class NapierActivity(activity.Activity):
@@ -176,7 +166,7 @@ class NapierActivity(activity.Activity):
         self._number = 0
         self._number_of_bones = 0
 
-        self._setup_toolbars(_have_toolbox)
+        self._setup_toolbars()
         self._setup_canvas()
         self._circles = [None, None]
         self._ovals = []
@@ -185,25 +175,24 @@ class NapierActivity(activity.Activity):
 
     def _setup_canvas(self):
         ''' Create a canvas '''
-        self._canvas = gtk.DrawingArea()
-        self._canvas.set_size_request(gtk.gdk.screen_width(),
-                                      gtk.gdk.screen_height())
+        self._canvas = Gtk.DrawingArea()
+        self._canvas.set_size_request(Gdk.Screen.width(),
+                                      Gdk.Screen.height())
         self.set_canvas(self._canvas)
         self._canvas.show()
         self.show_all()
 
-        self._canvas.set_flags(gtk.CAN_FOCUS)
-        self._canvas.add_events(gtk.gdk.BUTTON_PRESS_MASK)
-        self._canvas.add_events(gtk.gdk.BUTTON_RELEASE_MASK)
-        self._canvas.add_events(gtk.gdk.POINTER_MOTION_MASK)
-        self._canvas.connect("expose-event", self._expose_cb)
+        self._canvas.add_events(Gdk.EventMask.BUTTON_PRESS_MASK)
+        self._canvas.add_events(Gdk.EventMask.BUTTON_RELEASE_MASK)
+        self._canvas.add_events(Gdk.EventMask.POINTER_MOTION_MASK)
+        self._canvas.connect("draw", self.__draw_cb)
         self._canvas.connect("motion-notify-event", self._mouse_move_cb)
         # self._canvas.connect("key_press_event", self._key_press_cb)
 
     def _setup_workspace(self):
         ''' Add the bones. '''
-        self._width = gtk.gdk.screen_width()
-        self._height = int(gtk.gdk.screen_height() - (GRID_CELL_SIZE * 2))
+        self._width = Gdk.Screen.width()
+        self._height = int(Gdk.Screen.height() - (GRID_CELL_SIZE * 2))
         self._scale = self._height * 1.0 / BONE_HEIGHT
         self._bone_width = int(BONE_WIDTH * self._scale)
         self._bone_height = int(BONE_HEIGHT * self._scale)
@@ -231,43 +220,30 @@ class NapierActivity(activity.Activity):
         for bones in range(self._max_bones - 1):
             self._ovals.append(Sprite(self._sprites, 0, -100, oval_image))
 
-    def _setup_toolbars(self, have_toolbox):
+    def _setup_toolbars(self):
         ''' Setup the toolbars. '''
 
         self.max_participants = 1  # no sharing
 
-        if have_toolbox:
-            toolbox = ToolbarBox()
+        toolbox = ToolbarBox()
 
-            # Activity toolbar
-            activity_button = ActivityToolbarButton(self)
+        # Activity toolbar
+        activity_button = ActivityToolbarButton(self)
 
-            toolbox.toolbar.insert(activity_button, 0)
-            activity_button.show()
+        toolbox.toolbar.insert(activity_button, 0)
+        activity_button.show()
 
-            self._bones_toolbar = gtk.Toolbar()
-            self._bones_toolbar_button = ToolbarButton(label=_('Select a bone'),
+        self._bones_toolbar = Gtk.Toolbar()
+        self._bones_toolbar_button = ToolbarButton(label=_('Select a bone'),
                                                        page=self._bones_toolbar,
                                                        icon_name='bones')
 
-            self._bones_toolbar_button.show()
-            toolbox.toolbar.insert(self._bones_toolbar_button, -1)
-            self.set_toolbar_box(toolbox)
-            toolbox.show()
-            self.toolbar = toolbox.toolbar
+        self._bones_toolbar_button.show()
+        toolbox.toolbar.insert(self._bones_toolbar_button, -1)
+        self.set_toolbar_box(toolbox)
+        toolbox.show()
+        self.toolbar = toolbox.toolbar
 
-        else:
-            # Use pre-0.86 toolbar design
-            self._bones_toolbar = gtk.Toolbar()
-            self.toolbar = gtk.Toolbar()
-            toolbox = activity.ActivityToolbox(self)
-            self.set_toolbox(toolbox)
-            toolbox.add_toolbar(_('Bones'), self._bones_toolbar)
-            toolbox.add_toolbar(_('Results'), self.toolbar)
-            toolbox.show()
-            toolbox.set_current_toolbar(1)
-
-        separator_factory(self.toolbar)
 
         self._new_calc_button = button_factory(
             'erase', self.toolbar, self._new_calc_cb, tooltip=_('Clear'))
@@ -304,14 +280,12 @@ class NapierActivity(activity.Activity):
         button_factory('number-9', self._bones_toolbar, self._number_cb,
                         cb_arg=9, tooltip=_('nine'))
 
-        if _have_toolbox:
-            separator_factory(toolbox.toolbar, True, False)
-
-            stop_button = StopButton(self)
-            stop_button.props.accelerator = '<Ctrl>q'
-            toolbox.toolbar.insert(stop_button, -1)
-            stop_button.show()
-            self._bones_toolbar_button.set_expanded(True)
+        separator_factory(toolbox.toolbar, True, False)
+        stop_button = StopButton(self)
+        stop_button.props.accelerator = '<Ctrl>q'
+        toolbox.toolbar.insert(stop_button, -1)
+        stop_button.show()
+        self._bones_toolbar_button.set_expanded(True)
 
     def _new_calc_cb(self, button=None):
         ''' Start a new calculation. '''
@@ -370,10 +344,8 @@ class NapierActivity(activity.Activity):
         ''' TODO: Add bones by typing numbers '''
         return True
 
-    def _expose_cb(self, win, event):
-        ''' Callback to handle window expose events '''
-        self.do_expose_event(event)
-        return True
+    def __draw_cb(self, canvas, cr):
+        self._sprites.redraw_sprites(cr=cr)
 
     def do_expose_event(self, event):
         ''' Handle the expose-event by drawing '''
@@ -386,7 +358,7 @@ class NapierActivity(activity.Activity):
         self._sprites.redraw_sprites(cr=cr)
 
     def _destroy_cb(self, win, event):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def _restore(self):
         ''' Try to restore previous state. '''
