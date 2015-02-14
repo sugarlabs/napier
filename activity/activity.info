@@ -7,3 +7,4 @@ exec = sugar-activity NapierActivity.NapierActivity
 icon = activity-napier
 show_launcher = yes
 summary = Napier's bones are a multiplication calculator from the 16th century
+category = maths
