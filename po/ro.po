@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-03 10:21-0400\n"
+"PO-Revision-Date: 2016-05-15 05:36+0000\n"
+"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1463290562.000000\n"
+
+#: activity/activity.info:2
+msgid "Napier"
+msgstr ""
+
+#: NapierActivity.py:292
+msgid "Select a bone"
+msgstr ""
+
+#: NapierActivity.py:308
+msgid "Bones"
+msgstr ""
+
+#: NapierActivity.py:309
+msgid "Results"
+msgstr ""
+
+#: NapierActivity.py:316
+msgid "Clear"
+msgstr ""
+
+#: NapierActivity.py:320
+msgid "zero"
+msgstr "zero"
+
+#: NapierActivity.py:323
+msgid "one"
+msgstr "unu"
+
+#: NapierActivity.py:326
+msgid "two"
+msgstr ""
+
+#: NapierActivity.py:329
+msgid "three"
+msgstr "trei"
+
+#: NapierActivity.py:332
+msgid "four"
+msgstr "patru"
+
+#: NapierActivity.py:335
+msgid "five"
+msgstr "cinci"
+
+#: NapierActivity.py:338
+msgid "six"
+msgstr "șase"
+
+#: NapierActivity.py:341
+msgid "seven"
+msgstr "șapte"
+
+#: NapierActivity.py:344
+msgid "eight"
+msgstr "opt"
+
+#: NapierActivity.py:347
+msgid "nine"
+msgstr "nouă"
