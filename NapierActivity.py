@@ -13,6 +13,9 @@
 # Boston, MA 02111-1307, USA.
 
 import os
+import gi
+gi.require_version('Gtk', '3.0')
+gi.require_version('PangoCairo', '1.0')
 from gi.repository import Gtk, Gdk, GObject, GdkPixbuf
 import sugar3
 from sugar3.activity import activity
@@ -131,7 +134,7 @@ def _bone_factory(value, scale=1.0):
 def _svg_str_to_pixbuf(svg_string):
     ''' Load pixbuf from SVG string '''
     pl = GdkPixbuf.PixbufLoader.new_with_type('svg')
-    pl.write(svg_string)
+    pl.write(bytes(svg_string, 'utf-8'))
     pl.close()
     pixbuf = pl.get_pixbuf()
     return pixbuf
@@ -312,7 +315,7 @@ class NapierActivity(activity.Activity):
     def _mouse_move_cb(self, win, event):
         ''' Determine which row we are in and then calculate the product. '''
         win.grab_focus()
-        x, y = map(int, event.get_coords())
+        x, y = list(map(int, event.get_coords()))
         factor = int(y / self._bone_width)  # The row determines a factor
 
         if self._number == 0 or factor == 0:
@@ -336,8 +339,7 @@ class NapierActivity(activity.Activity):
             for number in range(self._number_of_bones - 1):
                 self._ovals[number].move(((number + 1) * self._bone_width + odx,
                                           factor * self._bone_width + ody))
-            self._status.set_label('%d × %d = %d' % (
-                    factor + 1, self._number, (factor + 1) * self._number))
+            self._status.set_label('{}×{}={}'.format(factor + 1, self._number, (factor + 1) * self._number))
         return True
 
     def _key_press_cb(self, win, event):
