@@ -8,73 +8,73 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-12-16 01:35+0000\n"
-"Last-Translator: unkuiri <unkuiri@gmail.com>\n"
+"PO-Revision-Date: 2020-07-13 18:55+0000\n"
+"Last-Translator: Jui  <juipradhan2k@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1481852142.000000\n"
+"X-POOTLE-MTIME: 1594666547.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr "Napier"
+msgstr ""
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr "Seleciona um tabuleiro"
+msgstr "एक हड्डी चुने"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr "Ossos"
+msgstr "हड्डियाँ"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr "Resultados"
+msgstr "परिणाम"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr "Limpar"
+msgstr "साफ़"
 
 #: NapierActivity.py:320
 msgid "zero"
-msgstr "zero"
+msgstr "शून्य"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr "um"
+msgstr "एक"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr "dois"
+msgstr "दो"
 
 #: NapierActivity.py:329
 msgid "three"
-msgstr "três"
+msgstr "तीन"
 
 #: NapierActivity.py:332
 msgid "four"
-msgstr "quatro"
+msgstr "चार"
 
 #: NapierActivity.py:335
 msgid "five"
-msgstr "cinco"
+msgstr "पाँच"
 
 #: NapierActivity.py:338
 msgid "six"
-msgstr "seis"
+msgstr "छः"
 
 #: NapierActivity.py:341
 msgid "seven"
-msgstr "sete"
+msgstr "सात"
 
 #: NapierActivity.py:344
 msgid "eight"
-msgstr "oito"
+msgstr "आठ"
 
 #: NapierActivity.py:347
 msgid "nine"
-msgstr "nove"
+msgstr "नौ"

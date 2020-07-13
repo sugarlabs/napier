@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:37+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2017-10-14 09:03+0000\n"
+"Last-Translator: yuray <yuray@komyakino.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,39 +18,39 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463290650.000000\n"
+"X-POOTLE-MTIME: 1507971832.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr ""
+msgstr "Палочки Непера"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr ""
+msgstr "Выберите палочку"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr ""
+msgstr "Палочки"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr ""
+msgstr "Результаты"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "Очистить"
 
 #: NapierActivity.py:320
 msgid "zero"
-msgstr ""
+msgstr "ноль"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr ""
+msgstr "один"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr ""
+msgstr "два"
 
 #: NapierActivity.py:329
 msgid "three"

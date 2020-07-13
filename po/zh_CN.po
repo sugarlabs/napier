@@ -8,73 +8,73 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-12-16 01:35+0000\n"
-"Last-Translator: unkuiri <unkuiri@gmail.com>\n"
+"PO-Revision-Date: 2017-08-03 04:34+0000\n"
+"Last-Translator: Liang <1656703453@qq.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1481852142.000000\n"
+"X-POOTLE-MTIME: 1501734840.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr "Napier"
+msgstr ""
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr "Seleciona um tabuleiro"
+msgstr "选择一块骨骼"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr "Ossos"
+msgstr "骨骼"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr "Resultados"
+msgstr "结果"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr "Limpar"
+msgstr "清除"
 
 #: NapierActivity.py:320
 msgid "zero"
-msgstr "zero"
+msgstr "零"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr "um"
+msgstr "一"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr "dois"
+msgstr "二"
 
 #: NapierActivity.py:329
 msgid "three"
-msgstr "três"
+msgstr "三"
 
 #: NapierActivity.py:332
 msgid "four"
-msgstr "quatro"
+msgstr "四"
 
 #: NapierActivity.py:335
 msgid "five"
-msgstr "cinco"
+msgstr "五"
 
 #: NapierActivity.py:338
 msgid "six"
-msgstr "seis"
+msgstr "六"
 
 #: NapierActivity.py:341
 msgid "seven"
-msgstr "sete"
+msgstr "七"
 
 #: NapierActivity.py:344
 msgid "eight"
-msgstr "oito"
+msgstr "八"
 
 #: NapierActivity.py:347
 msgid "nine"
-msgstr "nove"
+msgstr "九"

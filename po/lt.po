@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:30+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2017-02-17 12:05+0000\n"
+"Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463290241.000000\n"
+"X-POOTLE-MTIME: 1487333156.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
@@ -34,11 +34,11 @@ msgstr ""
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr ""
+msgstr "Rezultatai"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "Išvalyti"
 
 #: NapierActivity.py:320
 msgid "zero"
@@ -46,11 +46,11 @@ msgstr "nulis"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr ""
+msgstr "vienas"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr ""
+msgstr "du"
 
 #: NapierActivity.py:329
 msgid "three"
@@ -58,24 +58,24 @@ msgstr "trys"
 
 #: NapierActivity.py:332
 msgid "four"
-msgstr ""
+msgstr "keturi"
 
 #: NapierActivity.py:335
 msgid "five"
-msgstr ""
+msgstr "penki"
 
 #: NapierActivity.py:338
 msgid "six"
-msgstr ""
+msgstr "šeši"
 
 #: NapierActivity.py:341
 msgid "seven"
-msgstr ""
+msgstr "septyni"
 
 #: NapierActivity.py:344
 msgid "eight"
-msgstr ""
+msgstr "aštuoni"
 
 #: NapierActivity.py:347
 msgid "nine"
-msgstr ""
+msgstr "devyni"

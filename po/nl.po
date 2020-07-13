@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:08+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2016-09-19 19:25+0000\n"
+"Last-Translator: whe <heppew@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -17,39 +17,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463288931.000000\n"
+"X-POOTLE-MTIME: 1474313136.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr ""
+msgstr "Napier"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr ""
+msgstr "Selecteer een bot"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr ""
+msgstr "Botten"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr ""
+msgstr "Resultaten"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "Wissen"
 
 #: NapierActivity.py:320
 msgid "zero"
-msgstr ""
+msgstr "nul"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr ""
+msgstr "één"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr ""
+msgstr "twee"
 
 #: NapierActivity.py:329
 msgid "three"
