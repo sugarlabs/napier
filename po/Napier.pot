@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-03 10:21-0400\n"
+"POT-Creation-Date: 2020-07-14 00:32+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,58 +21,54 @@ msgstr ""
 msgid "Napier"
 msgstr ""
 
-#: NapierActivity.py:292
+#: activity/activity.info:3
+msgid "Napier's bones are a multiplication calculator from the 16th century"
+msgstr ""
+
+#: NapierActivity.py:240
 msgid "Select a bone"
 msgstr ""
 
-#: NapierActivity.py:308
-msgid "Bones"
-msgstr ""
-
-#: NapierActivity.py:309
-msgid "Results"
-msgstr ""
-
-#: NapierActivity.py:316
+#: NapierActivity.py:252
 msgid "Clear"
 msgstr ""
 
-#: NapierActivity.py:320
+#: NapierActivity.py:257
 msgid "zero"
 msgstr ""
 
-#: NapierActivity.py:323
+#: NapierActivity.py:260
 msgid "one"
 msgstr ""
 
-#: NapierActivity.py:326
+#: NapierActivity.py:263
 msgid "two"
 msgstr ""
 
-#: NapierActivity.py:329
+#: NapierActivity.py:266
 msgid "three"
 msgstr ""
 
-#: NapierActivity.py:332
+#: NapierActivity.py:269
 msgid "four"
 msgstr ""
 
-#: NapierActivity.py:335
+#: NapierActivity.py:272
 msgid "five"
 msgstr ""
 
-#: NapierActivity.py:338
+#: NapierActivity.py:275
 msgid "six"
 msgstr ""
 
-#: NapierActivity.py:341
+#: NapierActivity.py:278
 msgid "seven"
 msgstr ""
 
-#: NapierActivity.py:344
+#: NapierActivity.py:281
 msgid "eight"
 msgstr ""
 
-#: NapierActivity.py:347
+#: NapierActivity.py:284
 msgid "nine"
 msgstr ""
