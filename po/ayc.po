@@ -8,73 +8,73 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-12-16 01:35+0000\n"
-"Last-Translator: unkuiri <unkuiri@gmail.com>\n"
+"PO-Revision-Date: 2017-10-04 02:14+0000\n"
+"Last-Translator: EdgarQuispeChambi <equispe7@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt\n"
+"Language: ayc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1481852142.000000\n"
+"X-POOTLE-MTIME: 1507083256.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr "Napier"
+msgstr "Napier wakichata"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr "Seleciona um tabuleiro"
+msgstr "Maya p'alala chhijllma"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr "Ossos"
+msgstr "Ch'akanaka"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr "Resultados"
+msgstr "Qhanstirinaka"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr "Limpar"
+msgstr "Q'umachaña"
 
 #: NapierActivity.py:320
 msgid "zero"
-msgstr "zero"
+msgstr "Ch'usa"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr "um"
+msgstr "Maya"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr "dois"
+msgstr "Paya"
 
 #: NapierActivity.py:329
 msgid "three"
-msgstr "três"
+msgstr "kimsa"
 
 #: NapierActivity.py:332
 msgid "four"
-msgstr "quatro"
+msgstr "Pusi"
 
 #: NapierActivity.py:335
 msgid "five"
-msgstr "cinco"
+msgstr "Phisqa"
 
 #: NapierActivity.py:338
 msgid "six"
-msgstr "seis"
+msgstr "Suxta"
 
 #: NapierActivity.py:341
 msgid "seven"
-msgstr "sete"
+msgstr "Paqallqu"
 
 #: NapierActivity.py:344
 msgid "eight"
-msgstr "oito"
+msgstr "Kimsaqallqu"
 
 #: NapierActivity.py:347
 msgid "nine"
-msgstr "nove"
+msgstr "Llätunka"

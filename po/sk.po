@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:39+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2017-04-13 16:47+0000\n"
+"Last-Translator: jana <jpastyrova@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463290794.000000\n"
+"X-POOTLE-MTIME: 1492102039.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr ""
+msgstr "Napier"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr ""
+msgstr "Vyber kosť"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr ""
+msgstr "kosti"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr ""
+msgstr "výsledky"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "vymazať"
 
 #: NapierActivity.py:320
 msgid "zero"
@@ -45,11 +45,11 @@ msgstr "nula"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr ""
+msgstr "jeden"
 
 #: NapierActivity.py:326
 msgid "two"
-msgstr ""
+msgstr "dva"
 
 #: NapierActivity.py:329
 msgid "three"

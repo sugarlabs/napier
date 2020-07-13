@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:43+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2017-03-27 08:28+0000\n"
+"Last-Translator: Anders <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463290989.000000\n"
+"X-POOTLE-MTIME: 1490603313.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr ""
+msgstr "Napier"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr ""
+msgstr "Välj ett ben"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr ""
+msgstr "Ben"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr ""
+msgstr "Resultat"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: NapierActivity.py:320
 msgid "zero"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:19+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2017-02-21 22:00+0000\n"
+"Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463289573.000000\n"
+"X-POOTLE-MTIME: 1487714404.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr ""
+msgstr "Napiersche Rechenstäbchen"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr ""
+msgstr "Wähle ein Stäbchen"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr ""
+msgstr "Stäbchen"
 
 #: NapierActivity.py:309
 msgid "Results"
-msgstr ""
+msgstr "Ergebnisse"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "Löschen"
 
 #: NapierActivity.py:320
 msgid "zero"

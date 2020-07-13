@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-03 10:21-0400\n"
-"PO-Revision-Date: 2016-05-15 05:16+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2017-04-09 17:50+0000\n"
+"Last-Translator: bzg <bzg@bzg.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1463289418.000000\n"
+"X-POOTLE-MTIME: 1491760246.000000\n"
 
 #: activity/activity.info:2
 msgid "Napier"
-msgstr ""
+msgstr "Napier"
 
 #: NapierActivity.py:292
 msgid "Select a bone"
-msgstr ""
+msgstr "Choisis un os"
 
 #: NapierActivity.py:308
 msgid "Bones"
-msgstr ""
+msgstr "Os"
 
 #: NapierActivity.py:309
 msgid "Results"
@@ -37,7 +37,7 @@ msgstr "Résultats"
 
 #: NapierActivity.py:316
 msgid "Clear"
-msgstr ""
+msgstr "Effacer"
 
 #: NapierActivity.py:320
 msgid "zero"
@@ -45,7 +45,7 @@ msgstr "zéro"
 
 #: NapierActivity.py:323
 msgid "one"
-msgstr ""
+msgstr "un"
 
 #: NapierActivity.py:326
 msgid "two"
